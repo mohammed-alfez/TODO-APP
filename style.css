@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+#heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#todo-input, #todo-date {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus, #todo-date:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#Btn-todo {
+    background-color: #007bff;
+    color: white;
+}
+
+#Btn-todo:hover {
+    background-color: #0056b3;
+}
+
+#Btn-delete {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#Btn-delete:hover {
+    background-color: #e60000;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #todo-input, #todo-date {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
